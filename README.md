@@ -5,7 +5,7 @@ LensKernelFFT is created by Bob Roesler, original and usage description can be f
 While working with it from time to time I've made some improvements to it, and decided to post it here.
 
 # Improvements
-* The kernels knobs on gizmo are now filled with relative path below that points to the kernel files, which should be in the same directory as the .gizmo file.
+* The kernels knobs on gizmo are now filled with relative path below that points to the kernel files, which should be in the same directory as the [LensKernelFFT.gizmo](./LensKernelFFT.gizmo) file.
     ```tcl
     [python os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), 'LensKernelFFT', '35mmf56_normalized_v01.exr'))]
     ```
