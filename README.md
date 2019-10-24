@@ -2,6 +2,7 @@
 ![lensKernels](http://www.nukepedia.com/images/users/bobroesler/LensKernelFFT_02.png)
 
 LensKernelFFT is created by Bob Roesler, original and usage description can be found on nukepedia [here](http://www.nukepedia.com/gizmos/filter/lenskernelfft_v01/).
+While working with it from time to time I've made some improvements to it, and decided to post it here.
 
 # Improvements
 * The kernels knobs on gizmo are now filled with relative path below that points to the kernel files, which should be in the same directory as the .gizmo file.
