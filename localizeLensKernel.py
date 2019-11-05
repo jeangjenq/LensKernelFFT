@@ -3,6 +3,9 @@ Created by Jeang Jenq Loh on 24/10/2019
 Created to work with LensKernelFFT gizmo
 http://www.nukepedia.com/gizmos/filter/lenskernelfft_v01/finishdown?miv=1&mjv=1
 Copies the kernel files to the script directory for easy access
+
+Update 05/11/2019
+Fixed file path issue and now convert to absolute path oncreate
 '''
 
 import nuke
@@ -19,8 +22,8 @@ kernels_knobs = ['kernel14',
 
 def localizeLensKernel():
     script_dir = os.path.dirname(nuke.Root().name())
+    this = nuke.thisNode()
     if script_dir is not '':
-        this = nuke.thisNode()
         index = 0
         # Copy kernel files to script directory
         for kernel in kernels:
@@ -40,5 +43,11 @@ def localizeLensKernel():
         for node in nuke.allNodes(group=this):
             if node.Class() == 'Read':
                 node['reload'].execute()
+    else:
+        index = 0
+        for kernel in kernels:
+            old_file = os.path.abspath(current_dir + kernel)
+            this[kernels_knobs[index]].setValue(old_file)
+            index += 1
 
 nuke.addOnUserCreate(localizeLensKernel, nodeClass='LensKernelFFT')

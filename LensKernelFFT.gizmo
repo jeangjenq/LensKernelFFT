@@ -14,7 +14,7 @@ Gizmo {
 }
  Read {
   inputs 0
-  file "[python os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), 'LensKernelFFT', '35mmf56_normalized_v01.exr'))]"
+  file ""
   format "3908 2602 0 0 3908 2602 1 "
   origset true
   name Read3
@@ -23,7 +23,7 @@ Gizmo {
  }
  Read {
   inputs 0
-  file "[python os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), 'LensKernelFFT', '35mmf28_normalized_v01.exr'))]"
+  file ""
   format "3908 2602 0 0 3908 2602 1 "
   origset true
   name Read2
@@ -32,7 +32,7 @@ Gizmo {
  }
  Read {
   inputs 0
-  file "[python os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), 'LensKernelFFT', '35mmf14_normalized_v01.exr'))]"
+  file ""
   format "3908 2602 0 0 3908 2602 1 "
   origset true
   name Read1
